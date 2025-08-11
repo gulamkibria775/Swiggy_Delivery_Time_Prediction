@@ -1,0 +1,8 @@
+#!/media/kibria/624309e6-cae1-4eca-a603-4ebc61fc0d9b/Swiggy_Delivery_Time_Prediction/myenv/bin/python3
+# -*- coding: utf-8 -*-
+import re
+import sys
+from debugpy.server.cli import main
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])
+    sys.exit(main())
