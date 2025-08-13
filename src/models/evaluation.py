@@ -9,12 +9,15 @@ from sklearn.metrics import mean_absolute_error, r2_score
 import json
 
 
+import dagshub
+
+dagshub.auth.add_app_token("f7c95825a992bc37701d4c5fa22dc27abf08325b")
 
 
 dagshub_token = "f7c95825a992bc37701d4c5fa22dc27abf08325b"
 
 import dagshub
-dagshub.init(repo_owner='gulamkibria775', repo_name='Swiggy_Delivery_Time_Prediction', mlflow=True,token=dagshub_token)
+dagshub.init(repo_owner='gulamkibria775', repo_name='Swiggy_Delivery_Time_Prediction', mlflow=True)
 
 # set the mlflow tracking server
 mlflow.set_tracking_uri("https://dagshub.com/gulamkibria775/Swiggy_Delivery_Time_Prediction.mlflow")
