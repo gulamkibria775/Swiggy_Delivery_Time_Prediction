@@ -35,13 +35,13 @@ jobs:
         env:
           DAGSHUB_USER_TOKEN: f7c95825a992bc37701d4c5fa22dc27abf08325b  #${{ secrets.DAGSHUB_TOKEN }}
         run: |
-          pytest tests/test_model_registry.py
+          pytest test/test_model_registry.py
 
       - name: Test Model Performance
         env:
           DAGSHUB_USER_TOKEN: f7c95825a992bc37701d4c5fa22dc27abf08325b #${{ secrets.DAGSHUB_TOKEN }}
         run: |
-          pytest tests/test_model_perf.py
+          pytest test/test_model_perf.py
 
       - name: Promote Model
         if: success()
