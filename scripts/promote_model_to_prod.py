@@ -3,12 +3,15 @@ import dagshub
 import json
 from mlflow import MlflowClient
 
-dagshub.init(repo_owner='himanshu1703', 
-             repo_name='swiggy-delivery-time-prediction', 
-             mlflow=True)
+
+
+
+dagshub.init(repo_owner='gulamkibria775', repo_name='Swiggy_Delivery_Time_Prediction', mlflow=True)
 
 # set the mlflow tracking server
-mlflow.set_tracking_uri("https://dagshub.com/himanshu1703/swiggy-delivery-time-prediction.mlflow")
+mlflow.set_tracking_uri("https://dagshub.com/gulamkibria775/Swiggy_Delivery_Time_Prediction.mlflow")
+
+
 
 def load_model_information(file_path):
     with open(file_path) as f:
